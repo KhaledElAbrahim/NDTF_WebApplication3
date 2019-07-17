@@ -1,0 +1,91 @@
+﻿@page
+@model WebApplication3.Pages.BoardingandTrainingFacilitiesModel
+@{
+    ViewData["Title"] = "BoardingandTrainingFacilities";
+}
+
+<div class="container">
+    <h1>Boarding and Training Facilities</h1>
+    <br />
+    <div class="row">
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <h2>When is the right time to start dog obedience training?</h2>
+                    <br />
+                    <p>Does your dog’s behaviour take the joy out of owning a pet? Has walking your dog become a chore instead of a privilege? Owning a dog is a hugely rewarding experience, but dog owners should also be aware that they are in for both ups and downs along the way. The NDTF acknowledge that all dogs come with their own unique <a asp-page="./ObedienceTrainersSchools">range of emotions and behaviours.</a></p>
+                    <br />
+                    <p>Sometimes it can be hard to tell the difference between playful, wilful and just downright disobedient. If you feel like things with your canine friend are getting out of hand, it might be time to get some professional support. It is perfectly natural to want an obedient family pet, and in most cases behavioural guidance based on healthy practices takes time. But what if you don’t have the time to go to dog training classes?</p>
+                    <br />
+                    <p>Then an <a asp-page="./Index">NDTF accredited</a> Boarding and Training facility may be just what you are looking for!</p>
+                    <br />
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <h3>Canine Obedience Classes Away from Home</h3>
+                    <br />
+                    <p>The NDTF understand that many dog owners have busy lifestyles and are unable to make scheduled dog obedience classes. At the same time however we do know that when it come to handing your dog over to a trainer without your attendance, you will want the best in the business. The NDTF are a government accredited dog training organisation offering internationally trained and extensively experienced educators. We pride ourselves on our up to date industry knowledge and are keyed in to the best practices and facilities across Australia.</p>
+                    <br />
+                    <p>As well as representing dog obedience schools, the NDTF certifies and recommends organisations conducting boarding and training programs.</p>
+                    <br />
+                    <p>When you enrol your dog for boarding and training, an NDTF <a asp-page="./ObedienceTrainersSchools">accredited trainer</a> will take your dog through a comprehensive training program tailored to your requirements. This way you can be sure your dog is receiving the behavioural guidance which compliments and enhances your lifestyle together.</p>
+                    <br />
+                </div>
+            </div>
+            <div>
+
+                <img class="img img-thumbnail" src="~/imgs/2016/12/Dog-Pictures-1024x699.jpg" />
+                <br />
+            </div>
+            <div>
+                <h3>The Best Care While Your Dog is Away from Home</h3>
+                <br />
+                <p>Being away from your dog for any period can be stressful and for this reason we only recommend establishments with the very best facilities and staff. Not only must the trainers conducting the program be certified, but also the facility itself must meet stringent standards. If you would like to get started on a happier, healthier path with your dog, expert dog trainers are here to help.</p>
+                <br />
+                <p>For more information on accredited providers of boarding and training facilities, <a asp-page="./ContactUs">Contact</a> NDTF on 1300 66 44 66 or info@ndtf.net.au.</p>
+                <br />
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <p>Sign Up To Our Newsletter</p>
+            <p>To sign up, fill our the form below and click enter once your done</p>
+            <form method="post" asp-page="../subscribe/index" asp-page-handler="Add">
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Email">Email</label>
+                    <input class="form-control" asp-for="@Model.NVM.Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Firstname">Firstname</label>
+                    <input class="form-control" asp-for="@Model.NVM.Firstname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Lastname">Lastname</label>
+                    <input class="form-control" asp-for="@Model.NVM.Lastname" />
+                </div>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </form>
+            <br />
+            <br />
+            <form method="post" asp-page="./ContactUs" asp-page-handler="Add">
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Fullname">Firstname</label>
+                    <input class="form-control" asp-for="@Model.CVM.Fullname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Email">Email</label>
+                    <input class="form-control" asp-for="@Model.CVM.Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Subject">Subject</label>
+                    <input class="form-control" asp-for="@Model.CVM.Subject" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Message">Message</label>
+                    <textarea class="form-control" asp-for="@Model.CVM.Message"></textarea>
+                </div>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </form>
+        </div>
+    </div>
+</div>
+

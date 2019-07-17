@@ -1,0 +1,93 @@
+﻿@page
+@model WebApplication3.Pages.CertIIIGeneralInformationModel
+@{
+    ViewData["Title"] = "CertIIIGeneralInformation";
+}
+
+
+<div class="container">
+    <h1>General Information</h1>
+    <div class="text-center">
+        <h2>PROFESSIONAL DOG TRAINER CERTIFICATE III</h2>
+        <br />
+        <p>If you are serious about getting an education in dog training, the National Dog Trainers Federation (NDTF) is able to help with our Certificate III in Dog Behaviour and Training. This is Australia’s only government-approved and nationally recognised professional dog trainer certificate</p>
+        <br />
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <h3>ABOUT THE QUALIFICATION</h3>
+            <br />
+            <p>The 22214VIC Certificate III in Dog Behaviour and Training is Australia’s longest running and most comprehensive dog trainer certification program. The course is also a nationally recognised qualification under the Australian Qualifications Framework. The NDTF’s professional dog training courses combine theoretical canine behavioural education with an industry leading ‘hands on’ component. Each unit has its own specialist trainers, including some of whom are recognised as Australia’s leading experts in dog training and animal behaviour. Our dedicated and experienced team of instructors will work together to ensure that our graduates are truly the best in the business.</p>
+            <br />
+            <h4>A BALANCED APPROACH</h4>
+            <br />
+            <p>Rather than focusing on one single training philosophy or methodology, NDTF’s courses will introduce students to a wide range of training methods based on scientifically proven data and extensive research. The NDTF prides itself on providing a thorough and complete education, including canine communication and obedience training for dogs along with a balanced perspective on dog training techniques, equipment, ethical concerns, and canine welfare.</p>
+            <br />
+            <h4>OUR UNIQUE PARTNERSHIP WITH PRECISE TRAINING</h4>
+            <br />
+            <p>The NDTF works closely with <a href="www.precisetraining.com">Precise Training</a> to deliver this exciting and professional dog training course. As a Registered Training Organisation (RTO), Precise Training provides the educational expertise while we provide the dog training knowledge and curriculum.</p>
+            <br />
+            <h4>WHO IS THIS COURSE SUITABLE FOR?</h4>
+            <br />
+            <p>The course has been successfully completed by literally thousands of students throughout Australia and Internationally and is suitable for people from all walks of life. Whether students wish to be involved with obedience training for dogs or simply want to further their own knowledge of animal psychology and behaviour, the 22214VIC Certificate III in Dog Behaviour and Training represents the wisest and most informed choice.</p>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <h3>OUR COURSE INSTRUCTORS</h3>
+            <br />
+            <p>Unlike some other courses, the NDTF has cultivated a team featuring a wide variety of experts from various specialist dog training and canine behaviour-related backgrounds.</p>
+            <p>All of our course instructors have extensive experience and expertise in their specialised fields and are considered to be at the top of their expertise. These instructors include internationally experienced practitioners of obedience training for police and service dogs, Australia’s leading authorities on canine behaviour, veterinary surgeons, expert dog breeders, and highly qualified professional trainers.</p>
+            <p>Dr Robert Holmes BVMS PhD – widely regarded as one of Australia’s leading experts on animal behaviour – is just one of the many specialist instructors you will train with during the course.</p>
+            <br />
+            <h3>RECOGNITION OF PRIOR LEARNING</h3>
+            <br />
+            <p>The NDTF offers Recognition of Prior Learning (RPL) to people who have worked with dogs in a professional capacity, or who have trained dogs as volunteers. We can’t usually extend RPL to people who have trained their pet dogs; however exceptions can be made on the basis of outstanding results. This is decided on a case by case basis, and should be discussed with one of our staff.</p>
+            
+            <br />
+            <h4>CREDIT TRANSFERS</h4>
+            <br />
+            <p>We can transfer credits towards your professional dog trainer certificate for successfully completed the following units from the ACM10 Animal Care and Management Training Package:</p>
+            <ul>
+                <li>ACMSPE304A Provide basic care of dogs</li>
+                <li>ACMCAS410A Conduct companion animal training classes</li>
+                <li>ACMGAS206A Provide basic first aid for animals</li>
+                <li>ACMGAS206A Provide basic first aid for animals</li>
+            </ul>
+            <p>Successful credit transfers will not result in a lessened fee for your Certificate III in dog training.</p>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <h3>PAYMENT OPTIONS</h3>
+            <br />
+            <p>Payments for our professional dog training courses may be made by credit card (excluding American Express), or direct deposit. Cash payments are also accepted.</p>
+            <br />
+            <h4>HELP WITH PAYMENTS</h4>
+            <br />
+            <p>The NDTF offers a range of payment options to help ease the burden of covering your fees, including monthly instalments and other payment plans. Students receiving Centrelink payments may be eligible for fee assistance as well – speak to your case manager to determine if this is the case.</p>
+            <br />
+            <h3>APPLY TODAY</h3>
+            <br />
+            <p>Please contact us on 1300 664 466  or <a asp-page="./ContactUs">enquire online</a> we will forward you an application form, together with all the course information you need to apply</p>
+            <br />
+            <br />
+            <form method="post" asp-page="./ContactUs" asp-page-handler="Add">
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Fullname">Firstname</label>
+                    <input class="form-control" asp-for="@Model.CVM.Fullname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Email">Email</label>
+                    <input class="form-control" asp-for="@Model.CVM.Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Subject">Subject</label>
+                    <input class="form-control" asp-for="@Model.CVM.Subject" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Message">Message</label>
+                    <textarea class="form-control" asp-for="@Model.CVM.Message"></textarea>
+                </div>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </form>
+        </div>
+    </div>
+</div>
+

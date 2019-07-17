@@ -1,0 +1,64 @@
+﻿@page
+@model WebApplication3.Pages.ContactUs.ContactUsModel
+@{
+    ViewData["Title"] = "ContactUs";
+}
+
+<div class="container">
+    <h1>ContactUs</h1>
+    
+
+    <div class="row">
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+            <p>Contact Data</p>
+            <div>
+                <p>20 Havelock Road</p>
+                <p>Bayswater, VIC, 3153</p>
+                <p>Phone: 1300 66 44 66</p>
+                <p>Fax: 1300 66 49 30</p>
+                <p>Email: info@ndtf.net.au</p>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <p>Sign Up To Our Newsletter</p>
+            <p>To sign up, fill our the form below and click enter once your done</p>
+            <form method="post" asp-page="../subscribe/index" asp-page-handler="Add">
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Email">Email</label>
+                    <input class="form-control" asp-for="@Model.NVM.Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Firstname">Firstname</label>
+                    <input class="form-control" asp-for="@Model.NVM.Firstname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.NVM.Lastname">Lastname</label>
+                    <input class="form-control" asp-for="@Model.NVM.Lastname" />
+                </div>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </form>
+            <br />
+            <br />
+            <form method="post" asp-page="./ContactUs" asp-page-handler="Add">
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Fullname">Firstname</label>
+                    <input class="form-control" asp-for="@Model.CVM.Fullname" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Email">Email</label>
+                    <input class="form-control" asp-for="@Model.CVM.Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Subject">Subject</label>
+                    <input class="form-control" asp-for="@Model.CVM.Subject" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.CVM.Message">Message</label>
+                    <textarea class="form-control" asp-for="@Model.CVM.Message"></textarea>
+                </div>
+                <input type="submit" value="Add" class="btn btn-success" />
+            </form>
+
+        </div>
+    </div>
+</div>
